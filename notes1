@@ -1,0 +1,10 @@
+Course github repo  => react-redux-complete-playlist
+1. React creates a js representation of the DOM in a virtual DOM and renders it to the browser DOM.
+2. The virtual DOM makes react faster because it updates only the changed or updated component instead of rerendering all the DOM again
+
+3. we have (a)class based components (b) functional components
+4. Two limitations of using jsx (a) use className not class (a)return at least one root element  eg <div>
+
+5. Babel enables browsers to understand jsx
+6. The state of a component is the data that it displays or the UI state
+7. setState({}) used for updating the state

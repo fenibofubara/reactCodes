@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class App extends React.Component{
+        state = {
+                    surname:'fenibo',
+                    age:'12'
+                }
+
+        handleOnchange = (e)=>{
+            e.preventDefault()
+            this.setState({
+                surname: e.target.value
+            })
+           console.log(e.target.value)
+        }
+        handleOnSubmit = (e)=>{
+            e.preventDefault()
+            console.log('Form submitted Now', this.state.surname)
+        }
+    
+        render(){
+             return(
+                <div className="app-content">
+                <h1>Hey, Ninjas</h1>
+                <p>Hi,my name is {this.state.surname} and i am {this.state.age} years old</p>
+                <form  onSubmit={this.handleOnSubmit}>
+                    <input type="text" onChange={this.handleOnchange}/>
+                    <button>Submit</button>
+                </form>
+            
+                </div>
+             )
+            }
+        }
+
+    ReactDOM.render(<App />,document.querySelector('#app'))
+    </script>
+</body>
+</html>

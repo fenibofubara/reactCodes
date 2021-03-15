@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+        class App extends React.Component{
+        state = {
+                    surname:'fen',
+                    age:'12222'
+                  }
+                
+        handleClick = (e)=>{
+        this.setState({
+            surname:'newMan',
+            age:'50'
+        }) 
+        console.log(this.state)
+            }
+        handleMoveOver(e){
+                console.log(e.target,e.pageX)  
+        }
+        handleCopy(e){
+                console.log('Please original for once')}
+        render(){
+             return(
+                <div className="app-content">
+                <h1>Hey, Ninjas</h1>
+                <p>Hi,my name is {this.state.surname}</p>
+                <button onClick={this.handleClick}>Click Me</button>
+                <button onMouseOver={this.handleMoveOver}>Hover Me</button>
+                <p onCopy={this.handleCopy}> When you want to copy</p>
+                </div>
+             )
+            }
+        }
+
+    ReactDOM.render(<App />,document.querySelector('#app'))
+    </script>
+</body>
+</html>
