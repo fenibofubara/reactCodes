@@ -1,0 +1,3 @@
+=============== React as a spA ====== =======
+1. First request goes to server and server serves the index or first page to user.
+2. Any other request from the index page to another page does not go to the server.React picks the component requestted for and INJECTS it into the App.js
