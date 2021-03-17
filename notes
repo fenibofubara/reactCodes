@@ -1,0 +1,41 @@
+Course github repo  => react-redux-complete-playlist
+1. React creates a js representation of the DOM in a virtual DOM and renders it to the browser DOM.
+2. The virtual DOM makes react faster because it updates only the changed or updated component instead of rerendering all the DOM again
+
+3. we have (a)class based components (b) functional components
+4. Two limitations of using jsx (a) use className not class (a)return at least one root element  eg <div>
+
+5. Babel enables browsers to understand jsx
+6. The state of a component is the data that it displays or the UI state
+7. setState({}) used for updating the state
+
+================================================================
+
+1. React is a single page app, only one page is rendered from server to browser. Any other page request is handled by react on the browser and served to the user without comning from the browser
+
+2. Nesting of components involves exporting and importing and callng the import of one component inside another. The goal is to make the design modular.
+
+3. Props is a way of passing data,information from a parent component to a child
+
+
+============================= Hooks =======================
+1. Enables us to manipulate states in a functional component
+2. useState() = use state in a functional component
+3. useEffect() = run a code when a component mounts
+4. useContext() = use context in a functional component
+
+========================== Components Type ===================
+1. Container: Built as a class, has its own state
+
+2. UI Components: Built as a function, gets its state from a parent state
+
+
+
+=================== Styling ===================
+In react, just import './App.css'; and className='App' where .App is declared and styled in App.css
+... operator is used to get the remaining parameters of an array after a change has occured
+
+
+================= Links and Href =============
+1. React Links disable the default behavior of <a> of sending the request to the server.
+2. Link works as the anchor tag but lets the virtual DOM to send the other request.
