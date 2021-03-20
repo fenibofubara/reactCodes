@@ -7,4 +7,7 @@ Course github repo  => react-redux-complete-playlist
 
 5. Babel enables browsers to understand jsx
 6. The state of a component is the data that it displays or the UI state
-7. setState({}) used for updating the state
+
+====================  State Management ===================
+1. useState()
+2. Redux

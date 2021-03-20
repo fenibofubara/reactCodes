@@ -1,6 +1,8 @@
+import Rainbow from '../components/hoc/Rainbow.js'
+
 
 const About = (props)=>{
-    console.log(props)
+
     return(
         <div className='container'>
         <h4 className='center'>About</h4>
@@ -9,4 +11,4 @@ const About = (props)=>{
     )
 }
 
-export default About
+export default Rainbow(About)

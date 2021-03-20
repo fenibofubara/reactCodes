@@ -39,3 +39,55 @@ In react, just import './App.css'; and className='App' where .App is declared an
 ================= Links and Href =============
 1. React Links disable the default behavior of <a> of sending the request to the server.
 2. Link works as the anchor tag but lets the virtual DOM to send the other request.
+
+
+===================== Higher Order Component ===============
+HOC are components that takes in another component and returns a new component
+Eg withRouter. This adds extra capabiities to a normal conmponent
+
+
+============ hihger order component ==============
+Use to give special capacity to another function
+
+================ Redux Store ========================
+1. Store Api calls and other data that affects the general app
+2. context is used for token storage and smaller data
+
+3. Reducers are used to change the state in redux
+4. To use redux:   npm install redux react-redux
+======== Redux Bsic Scheme =============
+const{createStore} = Redux
+
+const initState = {
+  todos:[],
+  posts:[]
+}
+// reducer is where a store is being updated from
+const myReducer = (state=initState,action)=>{
+   if(action.type='ADD_TODO'){
+    return{
+      ...state
+      todos:[...state.todos,action.todo]
+    }
+   }
+
+   if(action.type='ADD_POST'){
+    return{
+      ...state
+      posts:[...state.posts,action.post]
+    }
+   }
+}
+// create store with reducer
+const store = createStore(myReducer)
+
+//use new state in components
+store.subscribe(()=>{
+  console.log('state updated')
+  console.log(store.getState())
+})
+
+// dspatch actions to your store
+store.dispatch({type:'ADD_TODO',todo:'buy milk'})
+store.dispatch({type:'ADD_TODO',todo:'sleep like a child'})
+store.dispatch({type:'ADD_POST',post:'my first post'})
