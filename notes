@@ -1,0 +1,8 @@
+1. create a context
+2. create a provider
+3. Wrap components with context
+4. use the context
+5. useEffect(()=>{
+   where i = any state you want to watch for its change before you run the useEffect
+},[i]) 
+6. useEffect runs at initial load of the component and whenever any state specified in the second parameter [] changes
