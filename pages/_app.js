@@ -1,7 +1,17 @@
-import '../styles/globals.css'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import App from 'next/app'
+// import { CounterProvider } from '../components/Counter'
+import CounterProvider from '../contexts/CounterContext'
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <CounterProvider>
+        <Component {...pageProps} />
+      </CounterProvider>
+    )
+  }
 }
 
 export default MyApp
